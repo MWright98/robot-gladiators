@@ -58,10 +58,10 @@ var fight = function() {
         else {
           fight();
         }
-      }
-        //} else {
-        // window.alert("You need to choose a valid option. Try again!");
-        // }
+      
+        } else {
+        window.alert("You need to choose a valid option. Try again!");
+        }
 
  };
 
