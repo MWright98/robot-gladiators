@@ -1,4 +1,5 @@
 //GITHUB TEST COMMENT
+console.log("Hello World!")
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
@@ -82,7 +83,8 @@ var fight = function(enemyName) {
  };
 
 
- for(var i = 0; i < enemyNames.length; i++) {
-     debugger;
-    fight(enemyNames[i]);
-  }
+ for (var i = 0; i < enemyNames.length; i++) {
+  var pickedEnemyName = enemyNames[i];
+  enemyHealth = 50;
+  fight(pickedEnemyName);
+}
