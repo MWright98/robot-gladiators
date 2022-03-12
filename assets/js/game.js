@@ -1,7 +1,3 @@
-
-//GITHUB TEST COMMENT
-console.log("Hello World!")
-
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
@@ -15,13 +11,6 @@ var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-
-
-//for(var i = 0; i < enemyNames.length; i++) {
-   // console.log(enemyNames[i]);
-   // console.log(i);
-   // console.log(enemyNames[i] + " is at " + i + " index");
-//  }
 
 // Game States
 // "WIN" - Player robot has defeated all enemy-robots
@@ -78,6 +67,7 @@ var fight = function(enemyName) {
       window.alert(playerName + ' has died!');
       // leave while() loop if player is dead
       break;
+
     } else {
       window.alert(playerName + ' still has ' + playerHealth + ' health left.');
     }
@@ -86,7 +76,18 @@ var fight = function(enemyName) {
 
 
  for (var i = 0; i < enemyNames.length; i++) {
-   var pickedEnemyName = enemyNames[i];
-   enemyHealth = 50;
-   fight(pickedEnemyName);
+  
+  if (playerHealth > 0) {
+    window.alert("Welcome to Robot Gladiators! Round " + ( i + 1 ) );
+    var pickedEnemyName = enemyNames[i];
+    enemyHealth = 50;
+    debugger;
+    fight(pickedEnemyName);
+  
+  }
+    else {
+      window.alert("You have lost your robot in battle! Game Over!");
+      break;
+    }
+   
  }
